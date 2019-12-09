@@ -97,6 +97,19 @@ void Meteo::operator()(size_t n){
     }
 }
 
+class Tchwilowa : public Obserwator {
+public:
+Tchwilowa(const chas* s, const Meteo& r) : Obserwator(s),ref{r} { };
+void update(){
+    t = ref.getT();
+    cout << "obserwator "<<id()<<" t ="<<t<<endl;
+}
+
+private:
+double t( 0. ) ;
+const Meteo& ref;
+
+}
 
 
 int main() {
