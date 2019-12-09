@@ -1,0 +1,15 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "build Liczba",
+        "type": "shell",
+        "command": "g++",
+        "args": ["-g", "-std=c++17", "-Wall", "-o", "prog", "main.cpp", "liczba.cpp", "operatory.cpp"],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        }
+      }
+    ]
+  }
